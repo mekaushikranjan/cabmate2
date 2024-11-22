@@ -1,0 +1,321 @@
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Navbar Styles */
+.navbar {
+    justify-content: space-between;
+    padding: 5px;
+   background-color: #45a049;
+    color: white;
+    position: relative; /* Parent container for absolute positioning */
+}
+
+.logo {
+    width: 20px; /* You can adjust the width */
+    height: 10%; /* Maintains aspect ratio */
+    padding: 5px;
+   
+    
+  }
+  
+  .logo-img {
+    background-color: black;
+    box-shadow: #4CAF50;
+    width: 100%; /* Ensures the image takes up the full width of the container */
+    height: auto; /* Maintains the image aspect ratio */
+    max-width: 100%; /* Prevents the image from exceeding the container width */
+  }
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+
+.navbar a.signup {
+    background-color: white;
+    color: #008000; /* Green text */
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+}
+
+/* Larger screens - Adjust hamburger size */
+@media (min-width: 768px) {
+    .hamburger div {
+        width: 30px;
+        height: 4px;
+    }
+}
+
+.menu {
+    display: none;
+    flex-direction: column;
+    background-color: #45a049;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    width: 200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu a {
+    padding: 10px;
+    border-bottom: 1px solid #45a049;
+}
+
+.menu a:last-child {
+    border-bottom: none;
+}
+
+.menu.active {
+    display: flex;
+}
+
+.navbar .right {
+    display: none;
+}
+
+/* Header Section */
+header img {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+/* Booking Section */
+.booking-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 80px;
+    gap: 20px;
+}
+
+.booking-form {
+    flex: 1;
+    max-width: 30%;
+    background-color: #f4f4f4;
+    padding: 60px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.booking-form h2 {
+    margin-bottom: 15px;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.booking-form button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.booking-form button:hover {
+    background-color: #45a049;
+}
+
+.cab-details {
+    flex: 1;
+    max-width: 35%;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cab-details h3 {
+    margin-bottom: 15px;
+}
+
+.cab-details p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Feature Section - Choose Your Perfect Ride */
+.feature-choose,
+.feature-monitor {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.feature-choose {
+    background-color: #ffffff;
+}
+
+.feature-monitor {
+    background-color: #f9f9f9;
+    flex-direction: row-reverse; /* Image right, text left */
+}
+
+.image-choose,
+.image-monitor {
+    flex: 1 1 40%;
+    max-width: 100%;
+}
+
+.image-choose img,
+.image-monitor img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.text-choose,
+.text-monitor {
+    flex: 1 1 50%;
+    max-width: 100%;
+}
+
+.text-choose h3,
+.text-monitor h3 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.text-choose p,
+.text-monitor p {
+    font-size: 24px;
+    line-height: 2;
+    color: #555;
+}
+
+.text-choose button,
+.text-monitor button {
+    font-size: 18px;
+    padding: 12px 25px;
+    margin-top: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.text-choose button:hover,
+.text-monitor button:hover {
+    background-color: #45a049;
+}
+
+/* Mobile Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .booking-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .booking-form,
+    .cab-details {
+        max-width: 100%;
+        margin-bottom: 20px;
+        padding: 15px;
+    }
+
+    .feature-choose,
+    .feature-monitor {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .image-choose,
+    .image-monitor {
+        order: 1;
+    }
+
+    .text-choose,
+    .text-monitor {
+        text-align: center;
+        order: 2;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #4CAF50;
+    padding: 30px 20px;
+    text-align: center;
+    color: black;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    margin: 10px;
+    text-align: left;
+    flex: 1 1 200px;
+}
+
+.footer-column h3 {
+    font-size: 14px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: black;
+}
+
+.footer-column a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    margin: 5px 0;
+    font-size: 12px;
+}
+
+.footer-column a:hover {
+    color: white;
+}
